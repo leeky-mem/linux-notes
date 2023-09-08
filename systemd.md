@@ -76,6 +76,9 @@ fails.
 ### Show depentecies of a *unit*
 `systemctl show -p type unit` In the type field one must specify one of the above types. 
 
+### Ordering
+Use `Before=<list of units>` and `After=<list of units>` to start depentend units in a particular order
+
 ## More Information
 For more information about systemd consult the arch wiki [systemd/user](https://wiki.archlinux.org/title/systemd/User) [systemd](https://wiki.archlinux.org/title/Systemd#Writing_unit_files)
 or that book you own... how linux works.
