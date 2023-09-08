@@ -15,7 +15,7 @@
 `systemctl reload unit` reloads just the config of *unit*\
 `systemctl deamon-reload` reloads all unit configurations
 
-### Adding Unit to systemd
+## Adding Unit to systemd
 directorys: /etc/systemd/system
 This is where the sys-admin puts systemwide unit files. Since I am the sys-admin on my machine it is ok to put them here.
 But arch(maybe other distros as well) offers a per-user instance of systemd. 
@@ -50,5 +50,32 @@ ExecStart=/usr/sbin/ot-net-setup.sh
 [Install]
 WantedBy=sys-subsystem-net-devices-wpan0.device
 ```
+## Depentencies
+### Requires
+Strict dependencies. When activating a unit with a Requires
+dependency unit, systemd attempts to activate the dependency unit. If
+the dependency unit fails, systemd also deactivates the dependent unit.
+
+### Wants <--- desired dependecy type for system robustness
+Dependencies for activation only. Upon activating a unit, sys-
+temd activates the unit’s Wants dependencies, but it doesn’t care if those
+dependencies fail.
+
+### Requisite
+Units that must already be active. Before activating a
+unit with a Requisite dependency, systemd first checks the status of the
+dependency. If the dependency hasn’t been activated, systemd fails on
+activation of the unit with the dependency.
+
+### Conflicts
+Negative dependencies. When activating a unit with a
+Conflict dependency, systemd automatically deactivates the opposing
+dependency if it’s active. Simultaneous activation of conflicting units
+fails.
+
+### Show depentecies of a *unit*
+`systemctl show -p type unit` In the type field one must specify one of the above types. 
+
+## More Information
 For more information about systemd consult the arch wiki [systemd/user](https://wiki.archlinux.org/title/systemd/User) [systemd](https://wiki.archlinux.org/title/Systemd#Writing_unit_files)
 or that book you own... how linux works.
