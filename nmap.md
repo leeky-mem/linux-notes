@@ -52,8 +52,8 @@ A full connection is need for service detection. Can lead to discovery of the sc
 `nmap -sV TARGET_IP`
 
 ## Intensity levels
-There are 10 intensity levels for the service scan. Level 0-9.
-`nmap -sV --version-intensitiy <0-9>`
-`--versioni-light` corresponds to level 2
-`--version-all` corresponds to level 9
+There are 10 intensity levels for the service scan. Level 0-9. \
+`nmap -sV --version-intensitiy <0-9>` \
+`--versioni-light` corresponds to level 2 \
+`--version-all` corresponds to level 9 \
 
