@@ -57,3 +57,17 @@ There are 10 intensity levels for the service scan. Level 0-9. \
 `--versioni-light` corresponds to level 2 \
 `--version-all` corresponds to level 9 \
 
+# OS Detection
+nmap can detect the OS with fingerprinting and even guesses the kernel version. The kernel version detection is not that accurate though.
+
+`-O` example with stealth scan: `nmap -sS -O TARGET_IP`
+
+# nmap Scripting Engine (NSE)
+scripts are located at `/usr/share/nmap/scripts`
+
+The scripts can be very intrusive and often crash the system. So be carefull with them.
+
+## Usage
+`-sC` for default scripts example: `nmap -sS -sC TARGET_IP` \
+`--script <script-name>` uses a specitic script \
+`--script <pattern*>` uses pattern and a wildcard to use all scripts in category. For example: `nmap -sS --script http*` 
