@@ -1,3 +1,6 @@
+# Host descovery
+`nmap -sn <ip-range>` - The -sn options omits the portscan on newer versions of nmap you must be root to see the mac addresses.
+
 # Port Scanning
 Port Scan Type:
 TCP Connect Scan: `nmap -sT MACHINE_IP`
