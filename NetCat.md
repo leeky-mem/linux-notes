@@ -13,7 +13,7 @@ We invoke nc via rlwrap which gives us access to history, tab completion and arr
 Needs to be installed if it is not. \
 Also stabilized Windows shell. 
 
-`rlwrap nc -lvnp <port>` - start nc in rlwrap \
+`rlwrap nc -lvnp <port>` - start nc in rlwrap
 
 On Linux we can stabilze the shell completly by turning off our own terminal echo like above. 
 
