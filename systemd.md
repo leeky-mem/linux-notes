@@ -50,7 +50,7 @@ ExecStart=/usr/sbin/ot-net-setup.sh
 [Install]
 WantedBy=sys-subsystem-net-devices-wpan0.device
 ```
-## Depentencies
+## Dependencies
 ### Requires
 Strict dependencies. When activating a unit with a Requires
 dependency unit, systemd attempts to activate the dependency unit. If
