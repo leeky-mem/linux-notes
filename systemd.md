@@ -18,7 +18,9 @@
 ## Adding Unit to systemd
 directorys: /etc/systemd/system
 This is where the sys-admin puts systemwide unit files. Since I am the sys-admin on my machine it is ok to put them here.
-But arch(maybe other distros as well) offers a per-user instance of systemd. 
+But units in this directory are executed as root and this is not wise for many things.
+
+Arch(maybe other distros as well) offers a per-user instance of systemd. 
 To use this put the unit files in the following directory: 
 ~/.config/systemd/user
 
