@@ -27,6 +27,8 @@ On linux this is a fully featured shell. On windows it is not more stable than a
 2. Use the netcat shell to download socat to the target
 3. Invoke socat from the netcat shell
 
+More on socat [here](https://github.com/leeky-mem/hacking-notes/blob/main/socat.md)
+
 ## Manually changing size of shell
 `stty -a` - gives the host shell size \
 `stty rows <row-size>` and `stty cols <cols-size>` changes the remote shell size
