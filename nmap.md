@@ -72,5 +72,5 @@ The scripts can be very intrusive and often crash the system. So be carefull wit
 
 ## Usage
 `-sC` for default scripts example: `nmap -sS -sC TARGET_IP` \
-`--script <script-name>` uses a specitic script \
+`--script <script-name>` uses a specific script \
 `--script <pattern*>` uses pattern and a wildcard to use all scripts in category. For example: `nmap -sS --script http*` 
