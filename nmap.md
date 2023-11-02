@@ -7,7 +7,7 @@
 TCP 3-way handshake: SYN | SYN,ACK | ACK\
 `-PS<port-range-or-list>` - TCP syn scann (SYN | SYN,ACK | RST)\
 `-PA<port>` - TCP ACK flag set (ACK | RST)\
-`-PU` - UDP scan closed ports send back ICMP Type3 code3 back
+`-PU` - UDP scan closed ports send back ICMP Type3 code3 back (Destination Unreachable)
 
 Some reuests might be blocked by firewalls, therefore it is good to try different options for live host discovery.
 
