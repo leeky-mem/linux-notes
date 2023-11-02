@@ -1,22 +1,30 @@
 # Host descovery
-`nmap -sn <ip-range>` - The -sn options omits the portscan on newer versions of nmap you must be root to see the mac addresses.
-`nmap -PR -sn <ip-range>` - Only Arp scan, only works on the same subnet obviously i.e. same Ethernet, Wlan.
+`nmap -sn <ip-range>` - The -sn options omits the portscan on newer versions of nmap you must be root to see the mac addresses.\
+`-PR` - Only Arp scan, only works on the same subnet obviously i.e. same Ethernet, Wlan.\
+`-PE` - ICMP echo request\
+`-PP` - ICMP time stamp request\
+`-PM` - ICMP address mask request\
+TCP 3-way handshake: SYN | SYN,ACK | ACK\
+`-PS<port-range-or-list>` - TCP syn scann (SYN | SYN,ACK | RST)\
+`-PA<port>` - TCP ACK flag set (ACK | RST)\
+`-PU` - UDP scan closed ports send back ICMP Type3 code3 back
+
+Some reuests might be blocked by firewalls, therefore it is good to try different options for live host discovery.
 
 # Port Scanning
-Port Scan Type:
-TCP Connect Scan: `nmap -sT MACHINE_IP`
-TCP SYN Scan: `sudo nmap -sS MACHINE_IP`
-UDP Scan: `sudo nmap -sU MACHINE_IP`
+Port Scan Type:\
+`nmap -sT MACHINE_IP` - TCP Connect Scan \
+`sudo nmap -sS MACHINE_IP` - TCP SYN Scan \
+`sudo nmap -sU MACHINE_IP` - UDP Scan
 
 ## Options
-Option: 				Purpose:
-`-p-` 					all ports
-`-p1-1023` 				scan ports 1 to 1023
-`-F` 					100 most common ports
-`-r` 					scan ports in consecutive order
-`-T<0-5>` 				-T0 being the slowest and T5 the fastest
-`--max-rate 50` 		rate <= 50 packets/sec
-`--min-rate 15` 		rate >= 15 packets/sec
+`-p-` 					all ports\
+`-p1-1023` 				scan ports 1 to 1023\
+`-F` 					100 most common ports\
+`-r` 					scan ports in consecutive order\
+`-T<0-5>` 				-T0 being the slowest and T5 the fastest\
+`--max-rate 50` 		rate <= 50 packets/sec\
+`--min-rate 15` 		rate >= 15 packets/sec\
 `--min-parallelism 100` at least 100 probes in parallel
 
 ## Timings
