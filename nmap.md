@@ -1,6 +1,6 @@
 # Host descovery
 `nmap -sn <ip-range>` - The -sn options omits the portscan on newer versions of nmap you must be root to see the mac addresses.
-`nmap -PR -sn <ip-range>` - Only Arp scan
+`nmap -PR -sn <ip-range>` - Only Arp scan, only works on the same subnet obviously i.e. same Ethernet, Wlan.
 
 # Port Scanning
 Port Scan Type:
