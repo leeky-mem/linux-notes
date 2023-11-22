@@ -20,6 +20,7 @@ Port Scan Type:\
 ## Options
 `-p-` 					all ports\
 `-p1-1023` 				scan ports 1 to 1023\
+`-p443,8081,8080` list of ports\
 `-F` 					100 most common ports\
 `-r` 					scan ports in consecutive order\
 `-T<0-5>` 				-T0 being the slowest and T5 the fastest\
@@ -66,7 +67,7 @@ A full connection is need for service detection. Can lead to discovery of the sc
 ## Intensity levels
 There are 10 intensity levels for the service scan. Level 0-9. \
 `nmap -sV --version-intensitiy <0-9>` \
-`--versioni-light` corresponds to level 2 \
+`--version-light` corresponds to level 2 \
 `--version-all` corresponds to level 9 \
 
 # OS Detection
