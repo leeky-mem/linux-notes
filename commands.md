@@ -22,3 +22,7 @@ It is important to note that the “find” command tends to generate errors whi
 `tio` - use `/dev/serial/by-id/<device-id>` as device for uniqueness
   `tio -b 115200 -d 8 -s 1 none /dev/serial/by-id/<device-id>`
 
+# Miscellaneous
+**nohup**\
+`nohup <application> > <outfile>` - detach process from terminal output of process will be appended to "nohup.out" if no output file is specified. \
+`nohup python -u <app.py> > out.txt` - runs python app. the `-u` is used so python does not buffer its output
